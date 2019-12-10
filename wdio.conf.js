@@ -15,7 +15,7 @@ exports.config = {
   logLevel: "trace",
   outputDir: "./test-report/output",
   bail: 0,
-  baseUrl: "https://cafetownsend-angular-rails.herokuapp.com/login",
+  baseUrl: "https://cafetownsend-angular-rails.herokuapp.com",
   waitforTimeout: 10000,
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
