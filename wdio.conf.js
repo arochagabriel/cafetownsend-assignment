@@ -5,7 +5,7 @@ exports.config = {
   hostname: "127.0.0.1",
   port: 4444,
   path: "/wd/hub",
-  specs: ["./test/features/*.feature"],
+  specs: ["./test/e2e/features/*.feature"],
   maxInstances: 2,
   capabilities: [
     {
@@ -35,7 +35,7 @@ exports.config = {
   ],
   cucumberOpts: {
     requireModule: ["@babel/register"],
-    require: ["./test/steps/*.steps.js"],
+    require: ["./test/e2e/steps/*.steps.js"],
     backtrace: false,
     compiler: [],
     dryRun: false,
