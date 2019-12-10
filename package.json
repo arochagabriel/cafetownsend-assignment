@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "tests:e2e": "wdio wdio.conf.js"
+    "tests:e2e": "wdio wdio.conf.js",
+    "report:allure": "./node_modules/allure-commandline/bin/allure",
+    "report:generate": "yarn report:allure generate --clean ./test-report/allure-result/ -o ./test-report/allure-report",
+    "report:open": "yarn report:allure open test-report/allure-report"
   },
   "license": "MIT",
   "dependencies": {

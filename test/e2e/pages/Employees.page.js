@@ -31,13 +31,17 @@ class EmployeesPage {
         return $("button=Add")
     }
 
+    get buttonDelete(){
+        return $("#bDelete")
+    }
+
     get textEmployerCreated(){
         return $("li=Boba Fett")
     }
 
 
     welcomeMesagge() {
-        this.textWelcome.waitForExist(5000);
+        this.textWelcome.waitForExist(3000);
         if (this.textWelcome.isExisting()) {
           return true;
         }
@@ -46,7 +50,7 @@ class EmployeesPage {
     }
 
     logout() {
-        if (this.buttonLogout.waitForExist(5000)) {
+        if (this.buttonLogout.waitForExist(3000)) {
             this.buttonLogout.click()
         }
     }
@@ -95,13 +99,30 @@ class EmployeesPage {
     }
 
     validateEmployer(){
-        this.textEmployerCreated.waitForExist(5000);
+        this.textEmployerCreated.waitForExist(3000);
         if (this.textEmployerCreated.isExisting()) {
           return true;
         }
         return false;
     }
 
+    selectEmployerCreated(){
+        this.textEmployerCreated.waitForExist(3000);
+    if (this.textEmployerCreated.isExisting()) {
+         this.textEmployerCreated.scrollIntoView()
+         this.textEmployerCreated.click();
+        
+        }
+    return false;
+    }
+    deleteUserCreated(){
+        if (this.buttonDelete.isClickable()){
+            this.buttonDelete.click()
+        }
+       return false
+        }
 }
+
+
 
 export const employeesPage = new EmployeesPage();

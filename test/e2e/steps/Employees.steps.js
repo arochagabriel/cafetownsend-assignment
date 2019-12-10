@@ -33,3 +33,13 @@ Then(/^it shows the full name '(.+)' as a user created in the employees list$/,(
   employeesPage.validateEmployer()
   assert.equal(employeesPage.textEmployerCreated.getText(), employer)
 })
+
+
+When(/^The user clicks on Boba Fett$/,() =>{
+  employeesPage.selectEmployerCreated()
+})
+
+Then (/^it clicks on Delete button$/,()=>{
+  employeesPage.deleteUserCreated()
+  browser.acceptAlert()
+})

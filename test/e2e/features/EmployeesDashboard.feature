@@ -16,3 +16,6 @@ Background:
      Then it shows the full name 'Boba Fett' as a user created in the employees list
 
 
+Scenario: Delete user created
+    When The user clicks on Boba Fett
+    Then it clicks on Delete button
