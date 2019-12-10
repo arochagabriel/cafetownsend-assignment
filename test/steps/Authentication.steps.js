@@ -21,3 +21,9 @@ Then(/^it shows a welcome message '(.+)'$/, message => {
 Then(/^The user logs out$/, () => {
     employeesPage.logout()
 });
+
+Then(/^It shows an error message '(.+)'$/, message =>{
+    loginPage.invalidCredentials()
+    assert.equal(loginPage.textInvalidcredentials.getText(),message)
+});
+

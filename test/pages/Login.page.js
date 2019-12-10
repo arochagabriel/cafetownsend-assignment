@@ -15,6 +15,10 @@ class LoginPage{
         return $("button[type^='submit']")
     }
 
+    get textInvalidcredentials(){
+        return $(".error-message")
+    }
+
     typeCredentials(user,pass){
             this.inputUsername.waitForExist()
             this.inputPassword.waitForExist()
@@ -22,7 +26,15 @@ class LoginPage{
             this.inputPassword.setValue(pass)
             this.buttonLogin.click()
             browser.pause(3000)
+    }
+
+    invalidCredentials(){
+        this.textInvalidcredentials.waitForExist(5000);
+        if (this.textInvalidcredentials.isExisting()) {
+          return true;
         }
+        return false;
+    }
 }
 
 export const loginPage = new LoginPage();
