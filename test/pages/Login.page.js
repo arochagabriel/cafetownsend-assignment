@@ -15,10 +15,10 @@ class LoginPage{
         return $("button[type^='submit']")
     }
 
-    login(sUser,sPass){
+    typeCredentials(user,pass){
         if (this.inputUsername.isExisting()){
-            this.inputUsername.setValue(sUser)
-            this.inputPassword.setValue(sPass)
+            this.inputUsername.setValue(user)
+            this.inputPassword.setValue(pass)
             this.buttonLogin.click()
         }
     }
