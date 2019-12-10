@@ -1,5 +1,5 @@
 class LoginPage{
-    open(){
+     open(){
         browser.url("/login")
     }
 
@@ -16,11 +16,13 @@ class LoginPage{
     }
 
     typeCredentials(user,pass){
-        if (this.inputUsername.isExisting()){
+            this.inputUsername.waitForExist()
+            this.inputPassword.waitForExist()
             this.inputUsername.setValue(user)
             this.inputPassword.setValue(pass)
             this.buttonLogin.click()
+            browser.pause(3000)
         }
-    }
 }
+
 export const loginPage = new LoginPage();

@@ -1,22 +1,24 @@
-class EmployeesPage{
-    get textWelcome(){
+class EmployeesPage {
+    get textWelcome() {
         return $("#greetings")
     }
 
-    get buttonLogout(){
-        return $("p[ng-click^='logout()']")
+    get buttonLogout() {
+        return $("p[ng-click^='logout']")
     }
-    
-    
-    welcomeMesagge(message) {
+
+
+    welcomeMesagge() {
+        this.textWelcome.waitForExist(5000);
         if (this.textWelcome.isExisting()) {
           return true;
         }
         return false;
-      }
+      
+    }
 
-    logout(){
-        if (this.buttonLogout.isEnable()){
+    logout() {
+        if (this.buttonLogout.waitForExist(10000)) {
             this.buttonLogout.click()
         }
     }
