@@ -25,11 +25,11 @@ class LoginPage{
             this.inputUsername.setValue(user)
             this.inputPassword.setValue(pass)
             this.buttonLogin.click()
-            browser.pause(3000)
+            browser.pause(1500)
     }
 
     invalidCredentials(){
-        this.textInvalidcredentials.waitForExist(5000);
+        this.textInvalidcredentials.waitForExist(3000);
         if (this.textInvalidcredentials.isExisting()) {
           return true;
         }
