@@ -12,8 +12,12 @@ As a part of the assignment of automate a web application I choosed the next fra
 The reason why I chose WebdriveriIO as far is easier way to automate tests not mattering the website code of language, it's the best tool to handle differents Web JS frameworks or for apps as well. In addition, Cucumber is my preferred tool to automate, no because writing test case is a way easier, readable for everyone, data driven, reduce coding, etc but also for real-life allows me to integrate the Bussines and Tech sides in one single "file".
 
 
-# Requirements
-
+# Requirement
+   As I User 
+   I want to navigate to http://cafetownsend-angular-rails.herokuapp.com/
+   So I can do LogIn, LogOut, Create and Delete an employer 
+    
+# Tools Needed
   - *Node.js* >= 10.15.x [how to install Node](https://nodejs.org/en/download/)
   - *Yarn* >= 1.16.x [how to install Yarn](https://yarnpkg.com/en/docs/install#debian-stable)
   - *Docker* >= 2.1 [how to install docker](https://docs.docker.com/docker-for-mac/install/) 
@@ -60,15 +64,18 @@ $ yarn report:open
 Automatically you'll see a tab open with Allure report about your testing.
 
 ## For Maintainability
-1) If you want to see the interaction and your test being executing
+1) If you want to see the interaction and your test execution 
     - Install VNC Viewer in your notebook
     - After the step 3 (Run Docker, Selenium enviroment), open vnc viewer and create the conexions (two by each nodes)
         -0.0.0.0:5901, password: 'secret'
         -0.0.0.0:5902, password: 'secret'
-        
 2) Ways to add more test case
     - Create your feature file inside (test/e2e/features)
     - Create your steps-definitions (test/e2e/steps)
     - Create and identify the elements that you're going interactive with (test/e2e/pages)
 
 
+
+
+
+ 
