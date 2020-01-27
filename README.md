@@ -1,4 +1,4 @@
-#  Mobiquity - coding assignment
+#  TestCafe
 
 As a part of the assignment of automate a web application I choosed the next framework:
 
